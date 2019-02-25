@@ -10,7 +10,7 @@ class Post(models.Model):
     store = models.CharField(max_length=50)
     link = models.CharField(max_length=200, blank=True, default="")
     price = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
-    slug = models.SlugField(shoe_name.replace(" ", "-"))
+    slug = models.SlugField()
     praise = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     shoe_pic = models.ImageField(default='default.png', blank=True)
