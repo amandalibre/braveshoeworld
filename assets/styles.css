@@ -18,14 +18,23 @@ body{
     font-size: 2.4em;
  }
 
+ul{
+    list-style-type: none;
+}
+
 .size-button{
     display: inline;
+    text-decoration: none;
     border-radius: 50%;
     border: none;
     font-size: 72px;
     color: black;
-    padding: 1%;
-    margin: 20px 100px 20px 100px;
+    padding: .6%;
+    margin: 20px;
+}
+
+.size-all{
+    background-color: #44C7F5;
 }
 
 .size-11{
@@ -60,7 +69,7 @@ body{
       text-decoration: none;
  }
 
- li a:hover, li form:hover{
+nav li a:hover, nav li form:hover{
     background-color: #555;
     color: white;
 }
@@ -109,7 +118,7 @@ body{
  .posts{
     margin: 0 0 0 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0;
  }
 
