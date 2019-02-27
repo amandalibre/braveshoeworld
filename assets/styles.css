@@ -12,6 +12,10 @@ body{
     margin: 0 0 0 10px;
 }
 
+.jumbotron p{
+    text-align: center;
+}
+
  div.wrapper h1{
     text-align: center;
     margin: 20px auto;
@@ -20,37 +24,6 @@ body{
 
 ul{
     list-style-type: none;
-}
-
-.size-button{
-    display: inline;
-    text-decoration: none;
-    border-radius: 50%;
-    border: none;
-    font-size: 72px;
-    color: black;
-    padding: .6%;
-    margin: 20px;
-}
-
-.size-all{
-    background-color: #44C7F5;
-}
-
-.size-11{
-    background-color: #F1C40F;
-}
-
-.size-12{
-    background-color: #1ABC9C;
-}
-
-.size-13{
-    background-color: #8E44AD;
-}
-
-.size-plus{
-    background-color: #F91B0D;
 }
 
 .nav-top li a, .nav-top li form{
@@ -116,15 +89,16 @@ nav li a:hover, nav li form:hover{
  }
 
  .posts{
-    margin: 0 0 0 10px;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0;
+    background: #F6F6F6;
  }
 
 .post{
     margin: 20px;
-    border: 3px solid black;
+    background: white;
 }
 
  .post img{
@@ -138,16 +112,17 @@ nav li a:hover, nav li form:hover{
     font-size: 0.8em;
     margin: 0;
     color: black;
+    margin: 10px;
 }
 
 .site-form{
     margin: 0 200px 150px 200px;
     border: 1px solid black;
     padding: 10px;
-    background: white;
+    background: #F6F6F6;
 }
 
-.site-form input, .site-form textarea{
+.site-form input, .site-form textarea, .site-form select, .site-form label{
     display: block;
     width: 100%;
     margin: 0 0 0 0;
@@ -168,6 +143,7 @@ nav li a:hover, nav li form:hover{
     border: none;
     color: white;
     background: #900C3F;
+    margin: 20px, 0, 0, 0;
 }
 
 .create-post h2{

@@ -2,24 +2,20 @@
 
 {% block content %}
     <div class="jumbotron">
-        <p>We are living in a post-Payless world.</p>
-        <p>Welcome to the shoepocalypse.</p>
-        <div>
-            <a class="size-button size-all" href="{% url 'posts:list' %}">All</a>
-            <a class="size-button size-11" href="{% url 'posts:list_11' %}">11</a>
-            <a class="size-button size-12" href="{% url 'posts:list_12' %}">12</a>
-            <a class="size-button size-13" href="{% url 'posts:list_13' %}">13</a>
-            <a class="size-button size-plus" href="{% url 'posts:list_plus' %}">&nbsp;+&nbsp;</a>
-        </div>
+        <p>Where can we find <i>affordable</i> women's* extended size shoes in a <b>post-Payless world</b>?</p>
+        <p><strong>Brave Shoe World</strong> is here to find out.</p>
+
     </div>
-    <nav class="nav-middle">
-        <ul>
-            <li>Shoe Type</li>
-            <li>Price</li>
-            <li>Store</li>
-            <li>Brand</li>
-        </ul>
-    </nav>
+
+    <!--<nav class="nav-middle">-->
+        <!--<ul>-->
+            <!--<li>Shoe Type</li>-->
+            <!--<li>Price</li>-->
+            <!--<li>Store</li>-->
+            <!--<li>Brand</li>-->
+        <!--</ul>-->
+    <!--</nav>-->
+
     <div class="posts">
         {% for post in posts %}
             <div class="post">
