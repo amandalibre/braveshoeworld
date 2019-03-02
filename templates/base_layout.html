@@ -5,26 +5,32 @@
     <head>
         <meta charset="UTF-8">
         <title>Brave Shoe World</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
         <header class="wrapper">
-            <nav class="nav-top">
-                <ul>
-                        <li class="home-button" style="float:left"><a href="{% url 'home' %}">Brave Shoe World</a></li>
-                        <li style="float:right"><a href="{% url 'posts:create' %}">New Post</a></li>
-                    {% if user.is_authenticated %}
-                        <li>
-                            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit">Logout</button>
-                            </form>
-                        </li>
-                    {% else %}
-                        <li><a href="{% url 'accounts:login' %}">Login</a></li>
-                        <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
-                    {% endif %}
-                </ul>
+            <nav class="nav-top navbar navbar-expand-lg">
+                <a class="nav-link" href="{% url 'home' %}">Brave Shoe World</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
+                        <li class ="nav-item" style="float:right">
+                            <a class="nav-link" href="{% url 'posts:create' %}">New Post</a></li>
+                        {% if user.is_authenticated %}
+                            <li class ="nav-item">
+                                <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit">Logout</button>
+                                </form>
+                            </li>
+                        {% else %}
+                            <li class ="nav-item">
+                                <a class="nav-link" href="{% url 'accounts:login' %}">Login</a></li>
+                            <li class ="nav-item">
+                                <a class="nav-link" href="{% url 'accounts:signup' %}">Signup</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
             </nav>
         </header>
         <div class="wrapper">

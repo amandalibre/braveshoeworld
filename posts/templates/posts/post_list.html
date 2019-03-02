@@ -5,11 +5,11 @@
         <p>Where can we find <i>affordable</i> women's* extended size shoes in a <b>post-Payless world</b>?</p>
         <p><strong>Brave Shoe World</strong> is here to find out.</p>
     </div>
-    <ul class="main-options">
-        <li><a href="#">How it works</a></li>
-        <li><a href="#">Explore shoes</a></li>
-        <li><a href="{% url 'posts:create' %}">Add your shoes</a></li>
-    </ul>
+    <div class="main-options">
+        <div class="option-button"><a href="#">How it works</a></div>
+        <div class="option-button"><a href="#">Explore some shoes</a></div>
+        <div class="option-button"><a href="{% url 'posts:create' %}">Add your shoes</a></div>
+    </div>
 
     <div class="posts">
         {% for post in posts %}
@@ -18,7 +18,6 @@
                     <img src="{{post.shoe_pic.url }}" />
                     <h2><a href={{post.link}}>{{post.brand}}&nbsp{{post.shoe_type}}</a></h2>
                     <h2 class="store">{{post.store}}</h2>
-                    <h2><a href="{% url 'posts:detail' %}">More Info</a></h2>
             </div>
         {% endfor %}
     </div>
