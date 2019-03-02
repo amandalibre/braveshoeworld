@@ -4,25 +4,21 @@
     <div class="jumbotron">
         <p>Where can we find <i>affordable</i> women's* extended size shoes in a <b>post-Payless world</b>?</p>
         <p><strong>Brave Shoe World</strong> is here to find out.</p>
-
     </div>
-
-    <!--<nav class="nav-middle">-->
-        <!--<ul>-->
-            <!--<li>Shoe Type</li>-->
-            <!--<li>Price</li>-->
-            <!--<li>Store</li>-->
-            <!--<li>Brand</li>-->
-        <!--</ul>-->
-    <!--</nav>-->
+    <ul class="main-options">
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Explore shoes</a></li>
+        <li><a href="{% url 'posts:create' %}">Add your shoes</a></li>
+    </ul>
 
     <div class="posts">
         {% for post in posts %}
             <div class="post">
                 <h2 style="float:right">{{post.size}}</h2>
-                    <h2 class="store">{{post.store}}</h2>
                     <img src="{{post.shoe_pic.url }}" />
-                    <h2><a href={{post.link}}>{{post.shoe_name}}</a></h2>
+                    <h2><a href={{post.link}}>{{post.brand}}&nbsp{{post.shoe_type}}</a></h2>
+                    <h2 class="store">{{post.store}}</h2>
+                    <h2><a href="{% url 'posts:detail' %}">More Info</a></h2>
             </div>
         {% endfor %}
     </div>

@@ -4,7 +4,7 @@ body{
     font-family: verdana;
    }
 
- .wrapper {
+.wrapper {
     margin: 0 auto;
  }
 
@@ -34,21 +34,9 @@ ul{
       text-decoration: none;
  }
 
- .nav-middle li{
-      display: in-line;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
- }
 
 nav li a:hover, nav li form:hover{
     background-color: #555;
-    color: white;
-}
-
-.nav-middle li:hover {
-    background-color: #B3436E;
     color: white;
 }
 
@@ -56,7 +44,7 @@ nav li a:hover, nav li form:hover{
     float: right;
 }
 
-.nav-top ul, .nav-middle ul{
+.nav-top ul{
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -64,7 +52,7 @@ nav li a:hover, nav li form:hover{
  }
 
 .nav-top ul{
-      background-color: #333;
+      background-color: #333333;
  }
 
  nav ul li{
@@ -72,24 +60,9 @@ nav li a:hover, nav li form:hover{
     margin-left: 20px;
  }
 
- nav button{
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
- }
-
- .nav-middle{
-    margin: 10px 0 10px 0;
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-    background-color: #900C3F;
- }
-
  .posts{
     margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0;
@@ -110,9 +83,8 @@ nav li a:hover, nav li form:hover{
 
 .post h2, .post p{
     font-size: 0.8em;
-    margin: 0;
     color: black;
-    margin: 10px;
+    margin: 0;
 }
 
 .site-form{
@@ -148,4 +120,37 @@ nav li a:hover, nav li form:hover{
 
 .create-post h2{
     text-align: center;
+}
+
+.main-options a{
+    text-decoration: none;
+}
+
+.main-options ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+}
+
+
+.main-options li{
+    margin: 10px, 80px, 10px, 80px;
+    text-align: center;
+    font: bold 9px;
+    text-decoration: none;
+    background-color: #17F09B;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.main-options li:hover{
+    background-color: #87F3C9;
+}
+
+.main-options a:hover{
+    cursor: pointer;
 }
