@@ -1,24 +1,31 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-    <div class="jumbotron">
+    <div class="jumbotron" align="center">
         <p>Where can we find <i>affordable</i> women's* extended size shoes in a <b>post-Payless world</b>?</p>
         <p><strong>Brave Shoe World</strong> is here to find out.</p>
-    </div>
-    <div class="main-options">
-        <div class="option-button"><a href="#">How it works</a></div>
-        <div class="option-button"><a href="#">Explore some shoes</a></div>
-        <div class="option-button"><a href="{% url 'posts:create' %}">Add your shoes</a></div>
+        <div class="container" style="margin: 30px 0 30px 0">
+            <a class="btn btn-primary" role="button" href="#">How it works</a>
+            <a class="btn btn-primary" role="button" href="#">Explore some shoes</a>
+            <a class="btn btn-primary" role="button" href="{% url 'posts:create' %}">Add your shoes</a>
+        </div>
     </div>
 
-    <div class="posts">
-        {% for post in posts %}
-            <div class="post">
-                <h2 style="float:right">{{post.size}}</h2>
-                    <img src="{{post.shoe_pic.url }}" />
-                    <h2><a href={{post.link}}>{{post.brand}}&nbsp{{post.shoe_type}}</a></h2>
-                    <h2 class="store">{{post.store}}</h2>
-            </div>
-        {% endfor %}
+    <div class="container-fluid">
+        <div class="row">
+            {% for post in posts %}
+                <div class="col" style="margin-bottom: 20px">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{post.shoe_pic.url }}" class="card-img-top"/>
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.brand}}&nbsp{{post.shoe_type}}</h5>
+                            <p class="card-text">{{post.store}}</p>
+                            <p style="float:right">{{post.size}}</p>
+                            <a class="btn btn-primary" href={{post.link}}>Visit Store Website</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
