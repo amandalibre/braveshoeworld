@@ -1,0 +1,30 @@
+.btn-primary{
+    margin: 5px;
+    background-color:darkorchid;
+    border-color:darkorchid;
+}
+
+.btn-primary:hover{
+    background-color:mediumaquamarine;
+    border-color:mediumaquamarine;
+}
+
+.nav-brand{
+    color:mediumorchid;
+    margin-right:20px;
+}
+
+.nav-brand:hover{
+    text-decoration: none;
+    color:mediumaquamarine;
+}
+
+.jumbotron{
+    background-color:white;
+}
+
+
+.container-fluid.posts-area{
+    padding-top:50px;
+    background-color:#F1F0F0;
+}

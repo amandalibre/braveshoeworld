@@ -13,9 +13,58 @@
             <a class="btn btn-primary" role="button" href="#">Explore some shoes</a>
             <a class="btn btn-primary" role="button" href="{% url 'posts:create' %}">Add your shoes</a>
         </div>
+        <div class="container">
+            <table class="table">
+              <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Top Stores</th>
+                    <th scope="col">10.5</th>
+                    <th scope="col">11</th>
+                    <th scope="col">11.5</th>
+                    <th scope="col">12</th>
+                    <th scope="col">13</th>
+                    <th scope="col">14</th>
+                    <th scope="col">15</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>[store name]</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>[store name]</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>[store name]</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid posts-area  ">
         <div class="row">
             {% for post in posts %}
                 <div class="col" style="margin-bottom: 20px">
@@ -25,7 +74,7 @@
                             <h5 class="card-title">{{post.brand}}&nbsp{{post.shoe_type}}</h5>
                             <p class="card-text">{{post.store}}</p>
                             <p style="float:right">{{post.size}}</p>
-                            <a class="btn btn-primary" href={{post.link}}>Visit Store Website</a>
+                            <a class="btn btn-primary" href={{post.link}}>Store Website</a>
                         </div>
                     </div>
                 </div>

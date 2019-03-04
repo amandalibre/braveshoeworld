@@ -14,10 +14,10 @@
     </head>
     <body>
         <header class="wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="nav-brand" href="{% url 'home' %}">Brave Shoe World</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
+                   <span class="navbar-toggler-icon" style="color: white"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -26,14 +26,17 @@
                             <a class="nav-link" href="{% url 'about' %}">About</a>
                         </li>
                         <li class ="nav-item" style="float:right">
-                            <a class="nav-link" href="{% url 'posts:create' %}">New Post</a></li>
+                            <a class="nav-link" href="{% url 'posts:create' %}">New Post</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
                         {% if user.is_authenticated %}
                         <form class="form-inline my-2 my-lg-0" action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
                         </form>
                         {% else %}
-                        <li class ="nav-item">
+                        <li class ="nav-item ">
                             <a class="nav-link" href="{% url 'accounts:login' %}">Login</a></li>
                         <li class ="nav-item">
                             <a class="nav-link" href="{% url 'accounts:signup' %}">Signup</a></li>
