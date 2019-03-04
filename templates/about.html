@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About</title>
-</head>
-<body>
-    <h1>About</h1>
+{% extends 'base_layout.html' %}
+
+{% block title %}
+<title>About</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="text-center">
+        <img src="about-11-up.png" class="rounded" alt="11&Up">
+    </div>
     <p>A resource for extended women's shoe sizes</p>
-</body>
-</html>
+</div>
+{% endblock %}
