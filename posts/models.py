@@ -36,7 +36,7 @@ class Post(models.Model):
         ('in-store', 'in-store'),
     )
     purchased = models.CharField(max_length=9, choices=PURCHASED_CHOICES, verbose_name="Purchased Online or In-Store")
-    praise = models.TextField(verbose_name="Praise/Comments/More Information")
+    praise = models.TextField(verbose_name="Praise/Comments/More Information    ")
     date = models.DateTimeField(auto_now_add=True)
     shoe_pic = models.ImageField(default='default.png', blank=True)
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
