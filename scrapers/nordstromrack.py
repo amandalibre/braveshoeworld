@@ -16,6 +16,6 @@ for page in range(1, page_num):
         for size in shoe["_embedded"]["http://hautelook.com/rels/skus"]:
             if size["standard_size"] == "12":
                 size_count += 1
-                print(shoe["name"])
+                print(shoe["name"], shoe["brand_name"])
 print("total shoes: ", shoe_count)
 print("total size 12 shoes: ", size_count)
